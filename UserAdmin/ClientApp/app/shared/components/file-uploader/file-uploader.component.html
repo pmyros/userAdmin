@@ -1,0 +1,30 @@
+<div class="container-fluid" style="text-align:center">
+  <h3 style="padding-top:15px;">Upload Excel</h3>
+  <form id="uploadForm">
+    <input
+      color="primary"
+      mat-raised-button
+      #file
+      type="file"
+      multiple
+      (change)="upload(file.files)"
+    />
+    <input
+      style="margin-left: 15px;"
+      type="reset"
+      mat-raised-button
+      color="default"
+    />
+  </form>
+  <br />
+  <div *ngIf="isLoadingResults" style="padding:10px; margin: 0 auto; text-align: center">
+    <mat-spinner class="centered"></mat-spinner>
+  </div>
+  <div *ngIf="!isLoadingResults">
+    <app-dx-table
+      [datasource]="data"
+      [filename]="file"
+      [columns]="columns"
+    ></app-dx-table>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <span>
+    <h4>Anywhere Portfolio 6.0</h4>
+  </span>
+  <span class="example-spacer"></span>
+  <span>
+    <img src="../../../assets/images/ar.png" (click)="setLang('es')" class="flag" alt="Arg">
+    <img src="../../../assets/images/uy.png" (click)="setLang('uy')" class="flag" alt="Uy">
+    <img src="../../../assets/images/py.png" (click)="setLang('py')" class="flag" alt="Py">
+    <img src="../../../assets/images/us.png" (click)="setLang('en')" class="flag" alt="Us">
+  </span>
+  <!-- <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <li>
+              <a routerLink="/owner">Owner Actions</a>
+          </li>
+          <li>
+              <a routerLink="/account">Account Actions</a>
+          </li>
+      </ul>
+  </div> -->
+</mat-toolbar>
+<p-growl [(value)]="_signalRServices.msgs"></p-growl>

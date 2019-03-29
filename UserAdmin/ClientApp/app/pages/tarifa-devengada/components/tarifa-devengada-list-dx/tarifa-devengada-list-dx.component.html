@@ -1,0 +1,49 @@
+<div class="text-center">
+  <div style="padding-top:10px">
+    <h4>{{ "LISTA_TARIFAS_DEVENGADAS" | translate }}</h4>
+  </div>
+</div>
+<div>
+  <app-dx-table
+    [datasource]="tarifas"
+    [filename]="tarifas"
+    [columns]="columns"
+  ></app-dx-table>
+
+  <!-- <dx-data-grid
+    #grid
+    id="grid"
+    [dataSource]="tarifas"
+    [columns]="columns"
+    [showColumnLines]="true"
+    [showRowLines]="true"
+    [rowAlternationEnabled]="true"
+    [allowColumnReordering]="true"
+    [showBorders]="false"
+  >
+    <dxo-state-storing [enabled]="true" type="localStorage" storageKey="storage"></dxo-state-storing>
+    <dxo-remote-operations
+      [filtering]="true"
+      [sorting]="true"
+      [grouping]="true"
+    ></dxo-remote-operations>
+    <dxo-export [enabled]="true" fileName="TarifaDevengada"></dxo-export>
+    <dxo-column-chooser [enabled]="true" mode="select"></dxo-column-chooser>
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-sorting mode="multiple"></dxo-sorting>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-pager
+      [showPageSizeSelector]="true"
+      [allowedPageSizes]="[5, 10, 20]"
+      [showInfo]="true"
+    >
+    </dxo-pager>
+    <dxo-remote-operations [sorting]="true" [paging]="true">
+    </dxo-remote-operations>
+    <dxo-paging [pageSize]="12"></dxo-paging>
+    <dxo-pager
+      [showPageSizeSelector]="true"
+      [allowedPageSizes]="[8, 12, 20]"
+    ></dxo-pager>
+  </dx-data-grid> -->
+</div>

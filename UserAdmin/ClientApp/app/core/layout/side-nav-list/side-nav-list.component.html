@@ -1,0 +1,33 @@
+<mat-nav-list>
+  <div style="text-align: center;">
+    <h6>AP6</h6>
+  </div>
+  <!-- <a mat-list-item routerLink="/home" class="margin: 0 auto; text-align: center" (click)="onSidenavClose()">
+     <span class="nav-caption"><h6>AP6</h6></span>
+  </a> -->
+  <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+    <mat-icon>home</mat-icon> <span class="nav-caption">{{ 'HOME' | translate }}</span>
+  </a>
+  <a
+    mat-list-item
+    [routerLink]="['/tarifa-devengada']"
+    routerLinkActive="active"
+    (click)="onSidenavClose()"
+  >
+    <mat-icon>attach_money</mat-icon>
+    <span class="nav-caption">{{ 'TARIFA_DEVENGADA' | translate }}</span>
+  </a>
+  <a
+    mat-list-item
+    [routerLink]="['/usuarios']"
+    routerLinkActive="active"
+    (click)="onSidenavClose()"
+  >
+    <mat-icon>person</mat-icon>
+    <span class="nav-caption">{{ 'USUARIOS' | translate }}</span>
+  </a> 
+  <!-- <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+    <mat-icon>account_balance</mat-icon
+    ><span class="nav-caption">Account Actions</span>
+  </a> -->
+</mat-nav-list>

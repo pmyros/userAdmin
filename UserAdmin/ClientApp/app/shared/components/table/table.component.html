@@ -1,0 +1,38 @@
+<div class="container" style="text-align:center">
+  <h3>{{ "GRAFICO_SIGNALR" | translate }}</h3>
+  <div style="padding:10px;" class="centered">
+    <mat-spinner
+      *ngIf="!signalRService.tableData"
+      class="centered"      
+    ></mat-spinner>
+  </div>
+  <div style="text-align:center; display: block">
+    <table
+      *ngIf="signalRService.tableData"
+      style="margin: 0 auto"
+      class="table table-responsive"
+    >
+      <thead>
+        <tr>
+          <th>
+            Data 1
+          </th>
+          <th>
+            Data 2
+          </th>
+          <th>
+            Data 3
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let data of signalRService.tableData">
+          <td>{{ data.opcion1 }}</td>
+          <td>{{ data.opcion2 }}</td>
+          <td>{{ data.opcion3 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

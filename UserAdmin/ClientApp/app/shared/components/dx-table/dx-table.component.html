@@ -1,0 +1,38 @@
+<dx-data-grid
+  #grid
+  id="grid"
+  [dataSource]="datasource"
+  [columns]="columns"
+  [showColumnLines]="true"
+  [showRowLines]="true"
+  [rowAlternationEnabled]="true"
+  [allowColumnReordering]="true"
+  [showBorders]="false"
+  (onRowRemoving)="onRowRemoving($event)"
+  (onRowRemoved)="onRowRemoved($event)"
+>
+  <!-- <dxo-state-storing [enabled]="true" type="localStorage" storageKey="storage"></dxo-state-storing> -->
+  <dxo-editing
+    mode="row"
+    [allowUpdating]="false"
+    [allowDeleting]="true"
+    [allowAdding]="false"
+  >
+  </dxo-editing>
+  <dxo-remote-operations
+    [filtering]="true"
+    [sorting]="true"
+    [grouping]="true"
+  ></dxo-remote-operations>
+  <dxo-export [enabled]="true" fileName="filename"></dxo-export>
+  <dxo-column-chooser [enabled]="true" mode="select"></dxo-column-chooser>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-sorting mode="multiple"></dxo-sorting>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[5, 10, 20]"
+    [showInfo]="true"
+  >
+  </dxo-pager>  
+</dx-data-grid>

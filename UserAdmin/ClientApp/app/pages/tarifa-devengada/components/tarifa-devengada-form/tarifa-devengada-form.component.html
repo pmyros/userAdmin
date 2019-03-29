@@ -1,0 +1,38 @@
+<div style="padding-top:15px" class="form-group">
+  <div style="margin: 0 auto">
+    <h4>{{ "FILTROS" | translate }}</h4>
+  </div>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-select
+        class="full-width"
+        id="mc"
+        formControlName="mc"
+        placeholder="{{'SELECCIONE_ALYC' | translate}}"
+      >
+        <mat-option value="0">
+            {{ "TODOS" | translate }}
+        </mat-option>
+        <mat-option
+          *ngFor="let mc of mcs"
+          [value]="mc.miembroCompensadorCodigo"
+        >
+          {{ mc.miembroCompensadorDescripcion }}
+          ({{ mc.miembroCompensadorCodigo }})
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <div>
+    <button
+      class="col-md-12"
+      mat-raised-button
+      (click)="selectMC(false)"
+      [disabled]="!form.valid"
+      style="display: inline-block; width: 100%;"
+      color="primary"
+    >
+      {{'FILTRAR' | translate}}
+    </button>
+  </div>
+</div>

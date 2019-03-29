@@ -1,0 +1,32 @@
+<mat-divider></mat-divider>
+<div class="container-fluid">
+  <div *ngIf="isLoadingMcsResults" style="padding:10px">
+    <mat-spinner class="centered"></mat-spinner>
+  </div>
+
+  <app-tarifa-devengada-form
+    *ngIf="!isLoadingMcsResults"
+    [mcs]="mcs"
+    (selectedMC)="onMcSelected($event)"
+  ></app-tarifa-devengada-form>
+</div>
+<mat-divider></mat-divider>
+<div class="container-fluid">
+  <div *ngIf="isLoadingMcsResults" style="padding:10px">
+    <mat-spinner class="centered"></mat-spinner>
+  </div>
+  <mat-tab-group *ngIf="!isLoadingDataResults">
+    <mat-tab label="DevExpress">
+      <ng-template matTabContent>
+        <app-tarifa-devengada-list-dx
+          [tarifas]="data"
+        ></app-tarifa-devengada-list-dx
+      ></ng-template>
+    </mat-tab>
+    <mat-tab label="PrimeNG">
+      <ng-template matTabContent>
+        <app-tarifa-devengada-list [tarifas]="data"></app-tarifa-devengada-list
+      ></ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

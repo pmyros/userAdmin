@@ -1,0 +1,105 @@
+.stock-widget {
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    background: linear-gradient(0deg, #3F51B5, #3F00A0);
+    border-radius: 1rem;
+    width: 350px;
+    height: 200px;
+    box-shadow: 0px 8px 38px -8px rgba(0, 0, 0, 0.75);
+  }
+  .stock-widget .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 86.95%;
+  }
+  .stock-widget .info .name {
+    margin-right: auto;
+  }
+  .stock-widget .info .fullname {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+  .stock-widget .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 110%;
+    height: 45%;
+    background: linear-gradient(0deg, #4cd964, #76e288);
+    border-radius: 1rem;
+    box-shadow: 0px 8px 18px -7px rgba(0, 0, 0, 0.75);
+  }
+  .stock-widget .badge .value {
+    font-size: 2.2rem;
+  }
+  .stock-widget .badge .currency {
+    font-size: 1.8rem;
+  }
+  .stock-widget .more-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 86.95%;
+  }
+  .stock-widget .more-data .loss {
+    color: white;
+  }
+  .stock-widget .more-data .earn {
+    color: #FFF;
+  }
+  .stock-widget .more-data .change {
+    margin-right: auto;
+  }
+  .stock-widget .more-data .change,
+  .stock-widget .more-data .change-percentage {
+    opacity: 0.7;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #dcdcde;
+    min-height: 100vh;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  footer a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: #000000 2px dashed;
+  }
+  footer a:hover {
+    color: #ffffff;
+    background: #000000;
+  }
+  

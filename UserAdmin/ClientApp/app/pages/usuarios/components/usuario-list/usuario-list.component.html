@@ -1,0 +1,13 @@
+<div class="text-center">
+  <div style="padding-top:10px">
+    <h4>{{ "LISTA_USUARIOS" | translate }}</h4>
+  </div>
+</div>
+<div>
+  <app-dx-table
+    (rowDeleted)='onRowDeleted($event)'
+    [datasource]="usuarios"
+    [filename]="usuarios"
+    [columns]="columns"
+  ></app-dx-table>
+</div>

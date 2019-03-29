@@ -1,0 +1,19 @@
+<div class="container" style="text-align:center">
+  <h3>{{ "GRAFICO_SIGNALR" | translate }}</h3>
+
+  <div *ngIf="!signalRService.data" style="padding:10px;" class="centered">
+    <mat-spinner class="centered"></mat-spinner>
+  </div>
+  <div style="display: block; max-width: 800px" *ngIf="signalRService.data">
+    <canvas
+      baseChart
+      [datasets]="signalRService.data"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [legend]="chartLegend"
+      [chartType]="chartType"
+      [colors]="colors"
+      (chartClick)="chartClicked($event)"
+    ></canvas>
+  </div>
+</div>
